@@ -45,6 +45,10 @@ html {
   scroll-behavior: smooth;
 }
 
+img{
+  pointer-events: none;
+}
+
 body {
   overflow-x: hidden;
   background-color: var(--bg);

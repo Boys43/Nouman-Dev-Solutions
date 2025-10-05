@@ -1,6 +1,7 @@
 import { Poppins, Oswald } from "next/font/google";
 import "./globals.css";
 import AOSWrapper from "./components/reusable/AOSWrapper";
+import Header from "./components/layout/Header";
 
 const poppins = Poppins({
   subsets: ["latin"], weight: ["400", '500', "600", "700"]
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </head>
       <body>
+        <Header />
         <AOSWrapper>{children}</AOSWrapper>
       </body>
     </html>

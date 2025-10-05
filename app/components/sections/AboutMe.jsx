@@ -26,7 +26,7 @@ const AboutMe = () => {
                         Want To know Me <ChevronRight size={15} />
                     </button>
                 </div>
-                <div className='flex justify-center'>
+                <div data-aos="fade-left" className='flex justify-center'>
                     <div className='rounded-4xl shadow-lg mt-1 bg-dark-gradient h-full border border-[var(--accent)] border-t-white border-t-4 p-8 flex flex-col items-center gap-6'>
                         <Image src={assets.hero_right} className="rounded-full w-30 h-30 border-4" width={300} height={300} alt='Hero Image' />
                         <div className='text-center'>

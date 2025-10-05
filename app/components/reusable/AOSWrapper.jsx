@@ -10,6 +10,8 @@ export default function AOSWrapper({ children }) {
             duration: 800,
             once: true,
             offset: 100,
+            easing: "ease-in-out",
+            disable: "mobile"
         });
     }, []);
 
