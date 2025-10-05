@@ -10,7 +10,7 @@ const HamBurger = () => {
     return (
         <>
             {/* Hamburger Menu for small screens */}
-            <div className="p-2 bg-[var(--accent)] absolute top-5 right-5 rounded-md shadow-2xl text-2xl z-50 cursor-pointer lg:hidden">
+            <div className="p-2 bg-[var(--accent)] fixed top-5 right-5 rounded-md shadow-2xl text-2xl z-50 cursor-pointer lg:hidden">
                 <Menu onClick={() => setToggleHamburger(!toggleHamburger)} />
             </div>
 

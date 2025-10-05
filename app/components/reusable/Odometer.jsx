@@ -41,7 +41,7 @@ export default function Odometer({ value, duration = 2000, className = "" }) {
   return (
     <span
       ref={ref}
-      className={`inline-block text-4xl font-bold tracking-wider ${className}`}
+      className={`inline-block text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider ${className}`}
     >
       {displayValue.toLocaleString()}
     </span>

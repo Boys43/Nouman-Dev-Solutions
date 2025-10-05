@@ -15,6 +15,7 @@ import { FaInstagram, FaLinkedin, FaTiktok, FaYoutube, } from "react-icons/fa";
 import Image from 'next/image';
 import Link from 'next/link';
 import Clients from './components/sections/Clients';
+import Skills from './components/sections/Skills';
 
 const Home = () => {
   return (
@@ -75,7 +76,7 @@ const Home = () => {
             data-aos='fade-left'
             className={`relative hidden flex-col justify-center items-center gap-6 lg:flex`}>
             <div className='absolute w-60 h-60 top-20 -z-1 left-50 bg-[var(--accent)] rounded-full' />
-            <div className='w-100 h-100 rounded-4xl before:absolute before:w-100 before:h-100 before:top-2 before:-z-1 before:left-2  before:bg-[var(--accent)] before:rounded-4xl relative'>
+            <div className='w-100 h-100 rounded-3xl before:absolute before:w-100 before:h-100 before:top-2 before:-z-1 before:left-2  before:bg-[var(--accent)] before:rounded-4xl relative'>
               {/* Overlay */}
               <Link href='https://www.fiverr.com/' target='_blank' className="absolute top-0 left-0 w-full h-full bg-[#4a4a4a57] hover:bg-[#2e2e2e57] group rounded-4xl transition-colors overflow-hidden cursor-pointer">
                 {/* Image */}
@@ -87,7 +88,7 @@ const Home = () => {
                   height={600}
                   priority
                   fetchPriority="high"
-                  className="w-full h-full object-cover transition-all duration-300 group-hover:scale-[1.1] rounded-4xl group-hover:blur-[2px]"
+                  className="w-full h-full object-cover transition-all duration-300 group-hover:scale-[1.1] rounded-3xl group-hover:blur-[2px]"
                 />
               </Link>
             </div>
@@ -102,6 +103,11 @@ const Home = () => {
         {/* Clients */}
         <section className='mt-10 sm:mt-12 md:mt-14 lg:mt-16'>
           <Clients />
+        </section>
+
+        {/* Skills */}
+        <section className='mt-10 mb-50 sm:mt-12 md:mt-14 lg:mt-16'>
+          <Skills />
         </section>
       </div>
     </main>

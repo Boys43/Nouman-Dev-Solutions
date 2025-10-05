@@ -22,7 +22,7 @@ const Sidebar = ({ className }) => {
         <aside className="fixed">
             <div
                 data-aos="fade-right"
-                className={`bg-[var(--secondary-color)]/70 border border-[var(--accent)] shadow-2xl p-6 rounded-2xl ${className}`}
+                className={`bg-[var(--secondary-color)]/30 backdrop-blur-sm border border-[var(--accent)] shadow-2xl p-6 rounded-2xl ${className}`}
             >
                 {/* Logo */}
                 <Link href="/">
