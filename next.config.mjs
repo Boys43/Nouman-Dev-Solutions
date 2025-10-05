@@ -1,9 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  experimental: {
-    scrollRestoration: true // Optional: Enables scroll restoration
-  }
-};
+const nextConfig = {};
 
 export default nextConfig;
