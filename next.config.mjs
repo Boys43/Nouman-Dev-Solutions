@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    swcMinify: true,
-    experimental: {
-        modern: true, // build modern JS for modern browsers
-        scrollRestoration: true
-    }
+  reactStrictMode: true,
+  experimental: {
+    scrollRestoration: true // Optional: Enables scroll restoration
+  }
 };
 
 export default nextConfig;
