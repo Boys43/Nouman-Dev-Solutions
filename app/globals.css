@@ -1,26 +1,132 @@
 @import "tailwindcss";
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-color: #9c27b0;
+  /* Brighter purple → contrast ~5:1 on dark bg */
+  --secondary-color: #121212;
+  /* Deeper dark → improves contrast with white/purple */
+  --white-color: #ffffff;
+  /* Keep */
+  --black-color: #000000;
+  /* Keep */
+  --bg: #1f1f1f;
+  /* Slightly darker than #1f1f1f */
+  --accent: #55595f;
+  /* Lighter gray → works on dark bg */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Thin Modern Scrollbar (Desktop) */
+::-webkit-scrollbar {
+  width: 8px;
+  /* thin */
+  background-color: var(--secondary-color);
+  height: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  /* slate-500 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  background-color: var(--bg);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background-color: var(--primary-color);
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: clamp(0.75rem, 0.9vw, 1rem);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #6f0f9bad;
+  box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.293);
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  padding: 0.5rem 2rem;
+  border-radius: 0.3rem;
+  background-color: var(--white-color);
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary-hover {
+  background-image: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+  box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.293);
+  transform: translateY(-3px);
+  color: var(--white-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+}
+
+h1.section-heading {
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  opacity: 1 !important;
+  padding: 0 1rem;
+}
+
+h1.section-heading::before,
+h1.section-heading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 3px;
+  background: white;
+  transform: translateY(-50%);
+}
+
+h1.section-heading::before {
+  left: -70px;
+}
+
+h1.section-heading::after {
+  right: -70px;
+}
+
+
+.font-reey {
+  font-family: 'Reey', sans-serif;
+}
+
+.bg-dark-gradient {
+  background: linear-gradient(to bottom right, #242424, #2d2d2d);
 }
