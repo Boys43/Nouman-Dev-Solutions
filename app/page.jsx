@@ -28,9 +28,9 @@ const Home = () => {
             data-aos='fade-right'
             className='flex relative flex-col justify-center gap-4'>
             <div className='absolute bottom-15 left-10 rounded-full bg-[var(--accent)] w-50 h-50 -z-1' />
-            <h3 className='flex text-xl justify-center lg:justify-start items-center gap-2'>
+            <span className='flex text-xl justify-center lg:justify-start items-center gap-2'>
               I am <span className='font-bold text-[var(--primary-color)] text-2xl'>Nouman Tariq</span>
-            </h3>
+            </span>
             <h1 className='flex justify-center lg:justify-start items-center text-4xl md:text-6xl font-bold flex-col gap-4 md:flex-row text-center md:text-left '>
               Coding Ideas Into Reality
             </h1>
