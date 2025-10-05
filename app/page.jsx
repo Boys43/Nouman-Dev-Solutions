@@ -18,22 +18,22 @@ import Clients from './components/sections/Clients';
 
 const Home = () => {
   return (
-    <main className='w-full gap-4 flex relative min-h-screen text-white'>
+    <main className='w-full gap-8 flex relative min-h-screen text-white'>
       <HamBurger />
       <div className='w-full'>
         {/* Hero */}
-        <section className="h-screen px-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <section className="py-20 md:py-30 lg:h-screen px-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div
             data-aos='fade-right'
             className='flex relative flex-col justify-center gap-4'>
             <div className='absolute bottom-15 left-10 rounded-full bg-[var(--accent)] w-50 h-50 -z-1' />
-            <h3 className='flex justify-center lg:justify-start items-center gap-2'>
-              Hello, I am <span className='text-[var(--primary-color)] font-bold'>Nouman</span> <Image src={assets.hand} className='w-5 animate-shake' alt="Hand Wave" />
+            <h3 className='flex text-xl justify-center lg:justify-start items-center gap-2'>
+              I am <span className='font-bold text-[var(--primary-color)] text-2xl'>Nouman Tariq</span>
             </h3>
-            <h1 className='flex justify-center lg:justify-start items-center text-4xl md:text-6xl leading-10 lg:leading-20 font-bold flex-col gap-4 md:flex-row'>
+            <h1 className='flex justify-center lg:justify-start items-center text-4xl md:text-6xl font-bold flex-col gap-4 md:flex-row text-center md:text-left '>
               Coding Ideas Into Reality
             </h1>
-            <h2 className='flex justify-center lg:justify-start w-full font-light mt-8'>Experties in   <span className='underline ml-2 underline-offset-8 font-semibold'>
+            <h2 className='flex text-xl md:text-2xl justify-center lg:justify-start w-full font-light mt-4'>Experties in   <span className='underline ml-2 underline-offset-8 font-semibold'>
               <TypedText strings={["React.js", "MongoDB", "HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "TailwindCSS"]} />
             </span></h2>
             <div className='flex justify-center lg:justify-start  mt-8 items-center gap-4'>
@@ -75,7 +75,7 @@ const Home = () => {
             data-aos='fade-left'
             className={`relative hidden flex-col justify-center items-center gap-6 lg:flex`}>
             <div className='absolute w-60 h-60 top-20 -z-1 left-50 bg-[var(--accent)] rounded-full' />
-            <div className='w-70 h-70 rounded-4xl border before:absolute before:w-70 before:h-70 before:top-4 before:-z-1 before:left-4  before:bg-[var(--accent)] before:rounded-4xl relative'>
+            <div className='w-100 h-100 rounded-4xl before:absolute before:w-100 before:h-100 before:top-2 before:-z-1 before:left-2  before:bg-[var(--accent)] before:rounded-4xl relative'>
               {/* Overlay */}
               <Link href='https://www.fiverr.com/' target='_blank' className="absolute top-0 left-0 w-full h-full bg-[#4a4a4a57] hover:bg-[#2e2e2e57] group rounded-4xl transition-colors overflow-hidden cursor-pointer">
                 {/* Image */}
@@ -95,16 +95,15 @@ const Home = () => {
         </section>
 
         {/* About Me */}
-        <section className='mt-10 sm:mt-14 md:mt-18 lg:mt-20'>
+        <section className='mt-10 sm:mt-12 md:mt-14 lg:mt-16'>
           <AboutMe />
         </section>
 
         {/* Clients */}
-        <section className='mt-10 sm:mt-14 md:mt-18 lg:mt-20'>
+        <section className='mt-10 sm:mt-12 md:mt-14 lg:mt-16'>
           <Clients />
         </section>
       </div>
-
     </main>
   )
 }

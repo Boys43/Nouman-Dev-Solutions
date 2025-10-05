@@ -4,19 +4,18 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Icons
-import { IoHomeOutline, IoPersonOutline } from "react-icons/io5";
-import { FaGithub, FaImages, FaInstagram, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa";
-import { CiMail, CiServer } from "react-icons/ci";
+import { FaGithub, FaInstagram, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Home, ImageIcon, Mail, Server, User } from "lucide-react";
 
 const Sidebar = ({ className }) => {
     const pathname = usePathname();
 
     const NavLinks = [
-        { name: "Home", link: "/", icon: <IoHomeOutline size={20} /> },
-        { name: "Projects", link: "/projects", icon: <FaImages size={20} /> },
-        { name: "Contact", link: "/contact", icon: <CiMail size={20} /> },
-        { name: "About", link: "/about", icon: <IoPersonOutline size={20} /> },
-        { name: "Services", link: "/services", icon: <CiServer size={20} /> },
+        { name: "Home", link: "/", icon: <Home size={20} /> },
+        { name: "Projects", link: "/projects", icon: <ImageIcon size={20} /> },
+        { name: "Contact", link: "/contact", icon: <Mail size={20} /> },
+        { name: "About", link: "/about", icon: <User size={20} /> },
+        { name: "Services", link: "/services", icon: <Server size={20} /> },
     ];
 
     return (
@@ -34,12 +33,14 @@ const Sidebar = ({ className }) => {
                 <nav className="text-[--white-color]">
                     <ul className="flex mt-10 flex-col gap-6">
                         {NavLinks.map((item, index) => (
-                            <li key={index}>
+                            <li key={index} className="group transition-all">
                                 <Link
                                     href={item.link}
                                     className="flex items-center gap-4"
                                 >
-                                    {item.icon}
+                                    <span className="text-white group-hover:text-[var(--primary-color)]">
+                                        {item.icon}
+                                    </span>
                                     <div
                                         className={`group relative px-2 py-1 font-medium transition-all duration-300 ease-in-out flex items-center gap-4 ${pathname === item.link
                                             ? "text-[var(--primary-color)] font-semibold"

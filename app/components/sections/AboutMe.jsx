@@ -9,21 +9,21 @@ const AboutMe = () => {
         <section className="px-8 py-10 mt-10 md:mt-15 lg:mt-20">
             {/* fixed: added 'grid' */}
             <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className='flex flex-col justify-evenly'>
+                <div className='flex flex-col justify-center gap-8 md:gap-12 lg:gap-16 '>
                     <div>
                         <div className="overflow-y-hidden w-full">
-                            <h1 data-aos="fade-up" className="font-medium text-center lg:text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+                            <h1 data-aos="fade-up" className="font-medium text-center lg:text-left text-5xl md:text-6xl">
                                 The Developer
                             </h1>
                         </div>
                         <div className="overflow-y-hidden w-full">
-                            <h1 data-aos="fade-up" className="font-medium text-center lg:text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+                            <h1 data-aos="fade-up" className="font-medium text-center lg:text-left text-5xl md:text-6xl">
                                 Behind the Vision
                             </h1>
                         </div>
                     </div>
-                    <button className='self-center w-50 flex items-center gap-3 justify-center'>
-                        About Me <ChevronRight size={15} />
+                    <button className='w-50 hidden md:flex items-center gap-3 justify-center'>
+                        Want To know Me <ChevronRight size={15} />
                     </button>
                 </div>
                 <div className='flex justify-center'>
@@ -37,7 +37,7 @@ const AboutMe = () => {
                                 AI Website Developer
                             </h4>
                         </div>
-                        <Link href='mailto:nt50616849@gmail.com' className='hover:shadow-xl hover:border-0 hover:-translate-y-1 cursor-pointer transition-all hover:bg-white hover:text-black hover:shadow-[#e8e4e458] bg-[var(--bg)] py-2 px-6 border border-[var(--accent)] flex items-center gap-4 rounded-xl w-50 sm:65 md:80 lg:w-95 text-white'>
+                        <Link href='mailto:nt50616849@gmail.com' className='hover:shadow-xl hover:border-0 hover:-translate-y-1 cursor-pointer transition-all hover:bg-white hover:text-black hover:shadow-[#e8e4e458] bg-[var(--bg)] py-2 px-6 border border-[var(--accent)] flex items-center gap-4 rounded-xl w-full text-white'>
                             <MailIcon size={15} /> nt50616849@gmail.com
                         </Link>
                         <Link href='tel:+923286960243' className='hover:shadow-xl hover:border-0 hover:-translate-y-1 cursor-pointer transition-all hover:bg-white hover:text-black hover:shadow-[#e8e4e458] bg-[var(--bg)] py-2 px-6 border border-[var(--accent)] flex items-center gap-4 rounded-xl w-full text-white'>
